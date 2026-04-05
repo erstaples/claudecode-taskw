@@ -11,7 +11,7 @@ Claude Code handles starting/stopping timers, persisting task context between se
 
 ## Install
 
-**1. Install Timewarrior**
+**First, install Timewarrior:**
 
 ```bash
 # macOS
@@ -24,7 +24,24 @@ sudo apt install timewarrior
 sudo dnf install timew
 ```
 
-**2. Clone this repo and run the installer**
+### Option A — Claude Code Plugin (recommended)
+
+Install directly from the plugin marketplace:
+
+```bash
+# Add this repo as a marketplace
+claude plugin marketplace add erstaples/claudecode-taskw
+
+# Install the plugin (user scope — available across all projects)
+claude plugin install timewarrior@claudecode-taskw --scope user
+
+# Or project scope — shared with your team via version control
+claude plugin install timewarrior@claudecode-taskw --scope project
+```
+
+The plugin is immediately available. Skills are namespaced as `/timewarrior:task` or via the `/task` shorthand defined in your CLAUDE.md.
+
+### Option B — Manual install
 
 ```bash
 git clone https://github.com/erstaples/claudecode-taskw.git
@@ -43,7 +60,7 @@ To install to a custom location:
 ./install.sh --skill-dir /path/to/skills/timewarrior
 ```
 
-**3. Add the snippet to your CLAUDE.md**
+**Add the snippet to your CLAUDE.md**
 
 The installer prints a block to paste. Add it to `~/.claude/CLAUDE.md` for global time tracking, or to a project-level `CLAUDE.md` for per-project tracking.
 

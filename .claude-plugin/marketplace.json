@@ -1,0 +1,28 @@
+{
+  "name": "claudecode-taskw",
+  "owner": {
+    "name": "erstaples",
+    "url": "https://github.com/erstaples"
+  },
+  "metadata": {
+    "description": "Claude Code time tracking plugins powered by Timewarrior",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "timewarrior",
+      "source": "./",
+      "description": "Zero-friction time tracking for Claude Code sessions via Timewarrior (timew). Tracks time across sessions with /task slash commands.",
+      "version": "1.0.0",
+      "author": {
+        "name": "erstaples",
+        "url": "https://github.com/erstaples"
+      },
+      "homepage": "https://github.com/erstaples/claudecode-taskw",
+      "repository": "https://github.com/erstaples/claudecode-taskw",
+      "license": "MIT",
+      "keywords": ["timewarrior", "timew", "time-tracking", "productivity", "task-management"],
+      "category": "productivity"
+    }
+  ]
+}
